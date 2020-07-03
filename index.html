@@ -15,7 +15,7 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/oauth-io/oauth-js/c5af4519/dist/oauth.js"></script>
    <script type="text/javascript">
-      $("#btnGithub").on("click", ()=>{
+      $("#btnGithub").on("click", function(){
         OAuth.initialize('IyMaYnzr9SRv5UKsyQ2VzRYdfZ8');
         OAuth.popup('github').then(github => {
           console.log('Github',github);
