@@ -27,7 +27,7 @@
           });
           github.get("/user").then(data => {
             console.log("self data",data)
-            console.log('nome:', data["nome"]);
+            console.log('nome:', data.name);
             $(data["name"]).appendTo("#lbUsuario");
           })
         })
