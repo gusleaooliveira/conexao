@@ -24,10 +24,11 @@
           console.log('Github',github);
           github.me().then(data => {
             console.log('me data:', data);
-            $(data["name"]).appendTo("#lbUsuario");
           });
           github.get("/user").then(data => {
             console.log("self data",data)
+            console.log('nome:', data["nome"]);
+            $(data["name"]).appendTo("#lbUsuario");
           })
         })
       });
