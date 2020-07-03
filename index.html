@@ -12,7 +12,7 @@
       <i class="fab fa-github"></i>
     </button>
 
-    <div class="card padding-16 margin-10" id="conteudo">
+    <div class="card padding-16 margin-10 text-indent" id="conteudo">
     </div>
     <p class="text-indent text-justify"></p>
 
@@ -29,10 +29,10 @@
           });
           github.get("/user").then(data => {
             console.log("self data",data)
-            $("<img src="+data.avatar_url+" class='image' />").appendTo("#conteudo");
-            $("<p class='text-justify text-indent'><b>Usuário:</b>"+data.name+"</p>").appendTo("#conteudo");
-            $("<p class='text-justify text-indent'><b>Email:</b>"+data.email+"</p>").appendTo("#conteudo");
-            $("<p class='text-justify text-indent'><b>Link para o perfil:<b>"+data.html_url+"</p>").appendTo("#conteudo");
+            $("<img src="+data.avatar_url+" class='image-card border-circle' />").appendTo("#conteudo");
+            $("<p class='text-justify text-indent'><b>Usuário:</b> "+data.name+"</p>").appendTo("#conteudo");
+            $("<p class='text-justify text-indent'><b>Email:</b> "+data.email+"</p>").appendTo("#conteudo");
+            $("<p class='text-justify text-indent'><b>Link para o perfil:</b> <a href='"+data.html_url+"' /></p>").appendTo("#conteudo");
           });
         })
       });
