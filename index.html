@@ -35,7 +35,7 @@
             $("<img src="+data.avatar_url+" class='image-card border-circle  ' />").appendTo("#conteudo");
             $("<p class='text-justify text-indent'><b>Usuário:</b> "+data.name+"</p>").appendTo("#conteudo");
             $("<p class='text-justify text-indent'><b>Email:</b> "+data.email+"</p>").appendTo("#conteudo");
-            $("<p class='text-justify text-indent'><b>Link para o perfil:</b> <a href='"+data.html_url+"' >Abrir o perfil</a></p>").appendTo("#conteudo");
+            $("<p class='text-justify text-indent'><b>Link para o perfil:</b> <a href='"+data.html_url+"' class='btn' >Abrir o perfil</a></p>").appendTo("#conteudo");
           });
         })
       });
