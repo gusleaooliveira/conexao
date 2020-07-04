@@ -11,10 +11,11 @@
     <div class="padding-16">
       <button class="btn btn-block eggplant" id="btnGithub">
         <i class="fab fa-github"></i>
+        Acessar com o github
       </button>
     </div>
 
-    <div class="card padding-16 margin-10 text-indent light-gray display-container" id="conteudo">
+    <div class="card padding-16 margin-10 text-center light-gray " id="conteudo">
     </div>
     <p class="text-indent text-justify"></p>
 
@@ -31,7 +32,7 @@
           });
           github.get("/user").then(data => {
             console.log("self data",data)
-            $("<img src="+data.avatar_url+" class='image-card border-circle display-middle-top ' />").appendTo("#conteudo");
+            $("<img src="+data.avatar_url+" class='image-card border-circle  ' />").appendTo("#conteudo");
             $("<p class='text-justify text-indent'><b>Usuário:</b> "+data.name+"</p>").appendTo("#conteudo");
             $("<p class='text-justify text-indent'><b>Email:</b> "+data.email+"</p>").appendTo("#conteudo");
             $("<p class='text-justify text-indent'><b>Link para o perfil:</b> <a href='"+data.html_url+"' >Abrir o perfil</a></p>").appendTo("#conteudo");
